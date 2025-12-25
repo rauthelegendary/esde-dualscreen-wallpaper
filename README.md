@@ -3,7 +3,7 @@
 
 This page contains instructions on how to sync game navigation in ES-DE to a KWGT widget through Tasker in order to create a dynamic wallpaper. This allows more cosmetic freedom for dual screen devices like the AYN Thor. Normally this type of wallpaper functionality should be done through KWGT's more powerful brother, KLWP. However, the AYN Thor does not let you assign KLWP to the bottom screen hence why I came up with this workaround.
 
-I would only recommend trying to set this up if you strongly prefer ES-DE over other launchers that have native dual screen support. KWGT is not intended at all to be used as a wallpaper and that comes with downsides:
+I would only recommend trying to set this up if you strongly prefer ES-DE over other launchers that have native dual screen support and you want to use ES-DE primarily on the top screen. KWGT is not intended at all to be used as a wallpaper and that comes with downsides:
 
 - The sync can be unresponsive (generally taking around 1 second, at times taking up to 2 seconds)
 - You can't fade from one wallpaper to the next, it will simply swap
