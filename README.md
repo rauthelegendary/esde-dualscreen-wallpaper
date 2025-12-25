@@ -62,17 +62,22 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
 
   10. Now you just need to place and resize the widget to fit your vision. Honestly, this is the worst part. These instructions will assume you want a fullscreen wallpaper. Smart Launcher thankfully lets you freely resize the widget. Click Fine positioning and try to get it to fill the screen.
       
-  ![](/img/img/sl.jpg)
+  ![](/img/sl.jpg)
 
   Then click Resize to further adjust it
   
-  ![](/img/img/slresize.jpg)
+  ![](/img/slresize.jpg)
 
   For a screen filling wallpaper I use these values, but you'll probably have to make some adjustments. It's really finicky.
+  
   Target side left: X -0.36
+  
   Target side top: Y -0.37
+  
   Target side right: Width 7.91
+  
   Target side bottom: Height 6.80
+  
 
   After you're done, double tap the wallpaper and KGWT will auto adjust the image size. This is the part where you pray that it ended up well. If not, you'll have to either go into KWGT and play with the sizes and centering of the image there, or you'll have to adjust the widget sizing values above. Experiment.
 
@@ -81,6 +86,6 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
 # Issues 
 
 - When you go back from the games list to the systems overview, the wallpaper stays on the last selected game until you navigate to another game. There's no good way to reset to a "default" wallpaper. The only solution I've found for this induces major stuttering to the system view.
-- Responsiveness. I think this is simply the downside of having to use KWGT. If someone figures out a way to use KLWP on the bottom screen of the AYN Thor, the sync would likely be more responsive
+- Responsiveness. I think this is simply the downside of having to use KWGT. If someone figures out a way to use KLWP on the bottom screen of the AYN Thor, the sync would likely be more responsive. I've added a 750ms wait time to the task to at least make the speed of swapping feel a bit more consistent.
 
 
