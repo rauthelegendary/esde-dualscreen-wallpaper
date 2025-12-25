@@ -47,7 +47,7 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
   
   ![](/img/taskerstep7v.jpg)
 
-  The string at the top points to the ES-DE directory containing the image we'll be sending to KWGT. Change the numbers of ESDEselected6 and 7 here if needed. Also, if you wish to use something other than fanart, you'll want to change the directory here. Boxart is in the "covers" folder, the mixed art is in "miximages". Make sure to save the changes. Go back to the main menu of Tasker and click the save button there too.
+  The string at the top points to the ES-DE directory containing the image we'll be sending to KWGT. Change the numbers of ESDEselected6 and 7 here if needed. Also, if you wish to use something other than fanart, you'll want to change the directory here. Boxart is in the "covers" folder, the mixed art is in "miximages". If the file extension for those images is different, you'll have to adjust step 5 again but this time change the value under "Replace With". Make sure to save all the changes. Go back to the main menu of Tasker and click the save button there too.
 
   8. Add a Kustom widget to your page in Smart Launcher. If you want to have buttons or other widgets on top of the wallpaper, you'll want to set all of those up first. It's pretty painful to adjust afterwards.
   9. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top.
