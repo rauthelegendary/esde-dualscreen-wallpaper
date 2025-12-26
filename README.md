@@ -59,7 +59,9 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
   - Make sure to save all the changes. Go back to the profile overview/main screen of Tasker and click the save button there too.
 
   10. Add a Kustom widget to your page in Smart Launcher. If you want to have buttons or other widgets on top of the wallpaper, you'll want to set all of those up first. It's pretty painful to adjust afterwards.
-  11. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top. This formula assumes that ES-DE is a root folder on your internal storage. If that's not the case, change the initial part of the path here.
+  11. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top.
+
+      Whether you're using the preset or doing it yourself, this formula assumes that ES-DE is a root folder on your internal storage. If that's not the case, change the initial part of the path in the formula editor. You can change an existing formula by clicking the calculator icon.
 
   ![](/img/kwgtimg.jpg)
   ![](/img/kwgtimgf.jpg)
