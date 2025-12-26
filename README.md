@@ -21,19 +21,24 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
 
 # Instructions
 
-1. Go to the main menu of ES-DE, Other Settings and make sure "Enable Custom Event Scripts" and "Browsing Custom Events" are both on
+1. Go to the main menu of ES-DE, Other Settings and make sure "Enable Custom Event Scripts" and "Browsing Custom Events" are both on.
    
    ![](/img/esde.png)
    
-2. Now take the scripts folder from the Files in this repository and copy it to the ES-DE folder on your device. This should give you an "ES-DE/scripts/game-select" folder with the game-select.sh script in it
-3. The script itself is very simple. All it does is write to a few text files in the Tasker folder with the path to the selected game, name of the selected game and system
-4. Copy the Game_Selection_Scroll.prf.xml from this repository to the "Tasker/profiles" folder on your device. If you haven't used Tasker or made a profile before, this folder might not exist yet
-5. Open Tasker, tap on the profiles tab to get a submenu, select "Import Profile" and then select the file you just copied
-6. When successfully imported Tasker will now execute the task below whenever you navigate to a new game in ES-DE
+2. Now take the scripts folder from the Files in this repository and copy it to the ES-DE folder on your device. This should give you an "ES-DE/scripts/game-select" folder with the game-select.sh script in it.
+3. The script itself is very simple. All it does is write to a few text files in the Tasker folder with the path to the selected game, name of the selected game and system.
+4. Copy the Game_Selection_Scroll.prf.xml from this repository to the "Tasker/profiles" folder on your device. If you haven't used Tasker or made a profile before, this folder might not exist yet.
+5. Just in case, run ES-DE with the scripts in place and scroll through some of your games. This should generate the esde_game_scroll.txt that we'll be working with. It should be in the Tasker folder. 
+6. Open Tasker, tap on the profiles tab to get a submenu, select "Import Profile" and then select the xml file you just downloaded. Also, Tasker needs all sorts of permissions to work properly. It should ask for these on its own if it doesn't have them already.
+7. After importing, you should see the "Game Selection Scroll" profile in Tasker. Make sure the toggle to the right of the profile is active. Now on the left click on "File Modified Tasker/esde_game_scroll.txt". Then click on the magnifying glass next to File and make sure it points to the txt file we just generated above.
+    
+  ![](/img/taskerfilesel.jpg)
+
+8. Back on the profile screen click on "Change BG Selected", you'll see the steps Tasker will execute whenever you navigate to a different game.
    
   ![](/img/taskeroverview.jpg)
   
-7. This is where I did some gross hardcoding. I might change it to a more general solution in the future. In step 4 of the task, Tasker will split the path to the game on every "/". If your folder structure has the same amount of steps as mine, that path and the split results will look like this:
+9. This is where I did some gross hardcoding. I might change it to a more general solution in the future. In step 4 of the task, Tasker will split the path to the game on every "/". If your folder structure has the same amount of steps as mine, that path and the split results will look something like this:
    
    ![](/img/taskerpath.jpg)
    
@@ -47,10 +52,15 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
   
   ![](/img/taskerstep7v.jpg)
 
-  The string at the top points to the ES-DE directory containing the image we'll be sending to KWGT. Change the numbers of ESDEselected6 and 7 here if needed. Also, if you wish to use something other than fanart, you'll want to change the directory here. Boxart is in the "covers" folder, the mixed art is in "miximages". If the file extension for those images is different, you'll have to adjust step 5 again but this time change the value under "Replace With". Make sure to save all the changes. Go back to the main menu of Tasker and click the save button there too.
+  The string at the top points to the ES-DE directory containing the image we'll be sending to KWGT
+  - First change the numbers of ESDEselected6 and 7 here if needed.
+  - Secondly, if ES-DE (and the downloaded_media folder within) are located somewhere else, you'll have to adjust the whole path. Mine assumes that ES-DE is a root folder on internal storage.
+  - Also, if you wish to use something other than fanart, you'll want to change the directory in this path as well. Boxart is in the "covers" folder, the mixed art is in "miximages".
+  - The fanart by default seems to be jpg, but the others are png's. So double check the file extension required for your images of choice, if you need to change it from jpg go back and adjust step 5 again but this time change the value under "Replace With".
+  - Make sure to save all the changes. Go back to the profile overview/main screen of Tasker and click the save button there too.
 
-  8. Add a Kustom widget to your page in Smart Launcher. If you want to have buttons or other widgets on top of the wallpaper, you'll want to set all of those up first. It's pretty painful to adjust afterwards.
-  9. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top.
+  10. Add a Kustom widget to your page in Smart Launcher. If you want to have buttons or other widgets on top of the wallpaper, you'll want to set all of those up first. It's pretty painful to adjust afterwards.
+  11. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top.
 
   ![](/img/kwgtimg.jpg)
   ![](/img/kwgtimgf.jpg)
@@ -60,7 +70,7 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
   ![](/img/img/kwgttitle.jpg)
   ![](/img/kwgtsystem.jpg)
 
-  10. Now you just need to place and resize the widget to fit your vision. Honestly, this is the worst part. These instructions will assume you want a fullscreen wallpaper. Smart Launcher thankfully lets you freely resize the widget. Click Fine positioning and try to get it to fill the screen.
+  12. Now you just need to place and resize the widget to fit your vision. Honestly, this is the worst part. These instructions will assume you want a fullscreen wallpaper. Smart Launcher thankfully lets you freely resize the widget. Click Fine positioning and try to get it to fill the screen.
       
   ![](/img/sl.jpg)
 
@@ -79,7 +89,7 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
   Target side bottom: Height 6.80
   
 
-  After you're done, double tap the wallpaper and KGWT will auto adjust the image size. This is the part where you pray that it ended up well. If not, you'll have to either go into KWGT and play with the sizes and centering of the image there, or you'll have to adjust the widget sizing values above. Experiment.
+  After you're done, double tap the wallpaper and KWGT will auto adjust the image size. This is the part where you pray that it ended up well. If not, you'll have to either go into KWGT and play with the sizes and centering of the image there, or you'll have to adjust the widget sizing values above. Experiment.
 
   At this point everything should work in unison. You might want to lock Smart Launcher once everything is set up to your liking. It's very easy to move the widget by accident and you'll have to do the resizing all over again.
   
