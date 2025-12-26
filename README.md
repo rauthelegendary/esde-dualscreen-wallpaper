@@ -54,13 +54,12 @@ I will assume you've already setup ES-DE on the top screen and Smart Launcher on
 
   The string at the top points to the ES-DE directory containing the image we'll be sending to KWGT
   - First change the numbers of ESDEselected6 and 7 here if needed.
-  - Secondly, if ES-DE (and the downloaded_media folder within) are located somewhere else, you'll have to adjust the whole path. Mine assumes that ES-DE is a root folder on internal storage.
-  - Also, if you wish to use something other than fanart, you'll want to change the directory in this path as well. Boxart is in the "covers" folder, the mixed art is in "miximages".
+  - Secondly, if you wish to use something other than fanart, you'll want to change the directory in this path as well. Boxart is in the "covers" folder, the mixed art is in "miximages".
   - The fanart by default seems to be jpg, but the others are png's. So double check the file extension required for your images of choice, if you need to change it from jpg go back and adjust step 5 again but this time change the value under "Replace With".
   - Make sure to save all the changes. Go back to the profile overview/main screen of Tasker and click the save button there too.
 
   10. Add a Kustom widget to your page in Smart Launcher. If you want to have buttons or other widgets on top of the wallpaper, you'll want to set all of those up first. It's pretty painful to adjust afterwards.
-  11. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top.
+  11. Click on the widget to go to KWGT. Import the preset from this repository there (if you have pro) or build the widget yourself. If you're doing the latter, simply add an image item and give it the formula below. You can add a formula by clicking on the square next to bitmap and then the calculator at the top. This formula assumes that ES-DE is a root folder on your internal storage. If that's not the case, change the initial part of the path here.
 
   ![](/img/kwgtimg.jpg)
   ![](/img/kwgtimgf.jpg)
